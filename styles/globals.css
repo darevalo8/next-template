@@ -1,0 +1,44 @@
+@layer tailwind-base, antd;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+/* @layer reset, antd;
+@import url(reset.css) layer(reset); */
+
+/* body {min-height: 100dvh;} */
+.hideOnMobile {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .hideOnMobile {
+    display: block;
+  }
+  .demo-logo-vertical{
+    width: 20%;
+  }
+}
+
+.hideOnDesktop {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .hideOnDesktop {
+    display: none;
+  }
+}
+
+.demo-logo-vertical {
+  /* width: 10%; */
+  height: 32px;
+  margin: 16px;
+  background: rgba(170, 4, 4, 0.2);
+  border-radius: 6px;
+}
+.navbar {
+  display: flex;
+  justify-content: baseline;
+  border-bottom: 1px solid rgba(5, 5, 5, 0.06)
+}
